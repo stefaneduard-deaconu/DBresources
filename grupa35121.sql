@@ -100,4 +100,14 @@ set salary = (
                       from emp_sde emp_min
                       where department_id = emp_min.department_id
           )
-    )
+    );
+
+--21
+update emp_sde
+set (job_id, department_id) = (
+    select job_id, department_id
+    from emp_sde
+    where employee_id = 205
+    );
+
+--22
